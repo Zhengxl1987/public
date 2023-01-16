@@ -1,0 +1,529 @@
+CSDN首页
+博客
+下载
+学习
+社区
+GitCode
+云服务
+猿如意
+
+搜CSDN
+  搜索
+登录
+会员中心
+历史
+创作中心
+发布
+体验一下传说中可以干掉程序员的OpenAI ChatGPT
+
+roykingw
+
+于 2022-12-08 15:42:32 发布
+
+6208
+ 收藏 7
+分类专栏： 大数据相关 文章标签： chatgpt java 开发语言
+版权
+
+ModelScope魔塔社区
+文章已被ModelScope魔塔社区社区收录
+加入社区
+
+大数据相关
+专栏收录该内容
+34 篇文章9 订阅
+订阅专栏
+ChatGPT初体验
+
+​ OpenAI公司最近开发了一个新的聊天AI模型，ChatGPT。网上铺天盖地传言AI可以替代程序员。于是今天也来体验了一下。下面是一个使用的案例：
+
+​ 首先看来他也不是万能的。
+
+问： 今年世界杯冠军预测
+ChatGPT: 对于世界杯的冠军预测，我无法提供任何帮助，因为我是一个计算机程序，不具备预测足球比赛结果的能力。
+此外，由于我的知识储备截止到2021年，我不知道2022年的世界杯甚至是否会举行。因此，我没有有关世界杯冠军预测的相关信息。
+建议您可以咨询其他人或者查询相关资料了解更多信息。
+​ 然后直奔程序员的主题：
+
+问：帮我写一个Java游戏
+ChatGPT: 要用Java编写一个游戏，需要按照如下步骤进行：
+安装JDK：首先需要安装Java开发工具包（JDK），以便能够使用Java语言进行编程。
+配置环境：其次，需要配置Java的运行环境，包括设置Java的安装路径、创建Java工程、导入相关的jar包等。
+编写代码：接着，需要编写Java代码来实现游戏的功能，包括游戏界面、游戏逻辑、游戏规则等。
+运行游戏：最后，需要运行Java工程，查看游戏运行结果。
+下面是一个简单的例子，展示了如何使用Java语言编写一个简单的控制台游戏：
+    public static void main(String[] args) {
+        // 创建游戏对象
+        Game game = new Game();
+
+        // 开始游戏
+        game.start();
+    }
+
+    // 游戏开始
+    public void start() {
+        // 显示游戏介绍
+        System.out.println("欢迎来到Java游戏世界！");
+
+        // 循环执行游戏操作
+        while (true) {
+            // 显示游戏菜单
+            System.out.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+​ 传说中的代码，并没有完全写完 。试了很多次，也都是限于篇幅没有写完。接下来来点绕口的：
+
+问：怎么注册ChatGPT
+ChatGPT：目前，ChatGPT是由OpenAI开发的一款大型语言模型，它可以用来生成自然语言文本。由于它是一款开源项目，所以并不需要注册即可使用。
+如果想要使用ChatGPT，可以通过以下步骤进行：
+安装依赖：首先需要安装相应的依赖，包括Python环境和TensorFlow库等。
+下载模型：其次，需要从OpenAI官网下载最新版本的ChatGPT模型。
+加载模型：接着，需要在代码中加载下载的模型，并使用相应的API进行训练和预测。
+下面是一个简单的例子，展示了如何使用ChatGPT进行自然语言生成：
+Copy code# 安装依赖
+!pip install tensorflow
+
+# 加载模型
+import openai
+openai.api_key = "your_api_key"
+model = openai.Model.get("text-davinci-002")
+
+# 预测
+prompt = "The quick brown fox jumps over the lazy dog."
+completions = model.completions(
+    engine="text-davinci-002",
+    prompt=prompt,
+    max_tokens=20,
+    temperature=0.5,
+)
+
+# 打印结果
+for completion in completions.get("choices"):
+    print(completion.get("text"))
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+在上面的例子中，我们首先通过pip命令安装了TensorFlow库，然后使用openai库加载了ChatGPT模型，最后调用模型的completions方法对输
+问： 如果不用python呢？
+ChatGPT: 如果不用Python，可以通过以下步骤使用ChatGPT进行自然语言生成：
+安装依赖：首先需要安装相应的依赖，包括TensorFlow库和适用于目标语言的类库等。
+下载模型：其次，需要从OpenAI官网下载最新版本的ChatGPT模型。
+加载模型：接着，需要在代码中加载下载的模型，并使用相应的API进行训练和预测。
+下面是一个使用Java语言的例子，展示了如何使用ChatGPT进行自然语言生成：
+Copy code// 安装依赖
+// 需要安装TensorFlow库和Java类库
+
+// 加载模型
+String model = "text-davinci-002";
+String prompt = "The quick brown fox jumps over the lazy dog.";
+int maxTokens = 20;
+float temperature = 0.5f;
+
+// 调用API进行预测
+Completion[] completions = client.models().completions(model, prompt, maxTokens, temperature).execute();
+
+// 打印结果
+for (Completion completion : completions) {
+    System.out.println(completion.text);
+}
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+在上面的例子中，我们首先通过安装TensorFlow库和Java类库，然后使用OpenAI API加载了ChatGPT模型，最后调用模型的completions方法对输入文本进行预测，并打印结果。
+在这里插入图片描述
+
+​ 另外，我还试过其他一些绕口的问题，结果有很多次直接卡得ChatGPT半天回不了话。也不知道是戳中了他的什么盲点了。
+
+​ 整体体验来看，ChatGPT回答还是挺像那么回事。但是也仅限于像而已。至于说想要达到传说中的干掉程序员的程度，还是有太长的路了。
+
+注册
+
+​ 你有没有问题想要挑战一下最强AI的？那就跟着下面的介绍，自己去注册一个把。
+
+注册准备工作
+
+​ 使用ChatGPT，需要注册一个OpenAI公司的专属账号。注册之前要准备一些资料。
+
+1、代理软件。最好是美国的代理地址。其次韩国、日本、印度、新加坡等地方的也可以。 不能用香港的。
+
+2、需要一个国外手机号。就是用来接收注册时的验证短信的。如果没有的话，也可以用网上的解码平台。sms-activate.org
+
+3、准备一个邮箱。我用的是Gmail的账号
+
+注册工作：
+
+1、进入ChartGPT的主页，选择体验ChatGPT
+
+在这里插入图片描述
+
+​ 接下来会进入登录页面。如果有账号就选择login。没有账号就选择sign up。进入注册页面： https://beta.openai.com/signup
+
+2、在注册账号时，建议就选择用Gmail方式登录。比较简单。
+
+在这里插入图片描述
+
+3、接收验证邮件
+
+​ 接下来会往你的邮箱当中发送一个验证邮件。点开邮件中的连接，就会进入一个网页，填写补充的信息。
+
+在这里插入图片描述
+
+​ 这一步也是很容易出问题的地方。 很多人会遇到一个提示，说服务在当前国家不可用。
+
+在这里插入图片描述
+
+​ 通常出现这个问题，就是因为你的代理软件出问题了。可能是位置不对，或者是没有全局代理。
+
+​ 出现这个问题后，当然需要切换代理，最好是切换到美国的代理。但是直接切换代理是没有用的，页面刷新后依然会是这个提示。这时还需要清理一下浏览器的缓存。
+
+​ 可以在当前页面的地址栏先输入 javascript:
+
+​ 然后在后面接上下面一段代码：
+
+window.localStorage.removeItem(Object.keys(window.localStorage).find(i=>i.startsWith('@@auth0spajs')))
+1
+在这里插入图片描述
+
+​ 这段代码的作用就是清除浏览器的一些本地缓存。如果你熟悉前端，也可以用浏览器的调试功能手动清除。
+
+​ 接下来按下回车后，再刷新页面。就可以正常看到注册页面了。
+
+4、验证手机号。
+
+​ 接下来往下走，就需要填写手机号。
+
+在这里插入图片描述
+
+​ 这里就需要填写一个国外的手机号。左侧图标下拉框选择国家，右侧输入手机号码。然后填写手机号接收到的短信验证码。
+
+5、使用接码服务平台购买短信接收服务。
+
+​ 如果你有国外的手机号，那就简单了。按照页面操作即可。但是如果你没有国外的手机号码，那么可以去接码平台购买一个。
+
+​ 进入接码网站sms-activate.org ，注册一个账号然后在左侧搜索OpenAi。
+
+在这里插入图片描述
+
+​ 下方的服务最好选择巴西，因为巴西服务比较稳定一点。点击后面的小黄车图标，就可以购买到一个号码。
+
+​ 另外，购买服务时，是需要提前充值的。不过这个平台是支持国内的支付宝的。所以直接用支付宝充值就可以了。 接码OpenAI的一次费用大概是30卢布，折合人民币不到3块钱。不过充值的时候只能充值美元。一般充值0.5美元即可。折合人民币也就几块钱。
+
+在这里插入图片描述
+
+​ 注意下，输入手机号码的时候，要注意下页面上的号码前缀。
+
+6、注册成功
+
+​ 短信验证码注册完成后，就可以体验了。
+
+在这里插入图片描述
+
+偷懒的脑洞
+
+​ 这里随便选择一个就可以了。接下来，你就可以进入ChatGPT页面，打开一下你的脑洞，去监测一下ChatGPT的成色了。
+
+在这里插入图片描述
+
+​ 甚至可以要他帮你把第一章写出来
+
+在这里插入图片描述
+
+最后温馨提醒，这个机器人说的话靠不靠谱，就要自己衡量了。
+
+
+roykingw
+关注
+
+3
+
+
+7
+打赏
+
+6
+
+专栏目录
+openai.vim:Vim的OpenAI GPT-3插件
+04-24
+openai.vim 一个vim插件，用于使用自动完成一行文本。 注意：如果您正在寻找功能齐全的AI驱动的完成功能，那么这更像是一个有趣的实验，请查看的。 目录 安装 该插件遵循标准的运行时路径结构。 以下是一些流行的软件包管理器的帮助线： git clone https://github.com/jessfraz/openai.vim.git ~/.vim/pack/plugins/start/openai.vim git clone https://github.com/jessfraz/openai.vim.git ~/.vim/bundle/openai.vim Plug 'jessfraz/openai.vim' Plugin 'jessfraz/openai.vim' 您必须在本地安装curl和jq ，并且OPENAI_API_KEY在环境中设置OPENAI_A
+机器人自动答问 ChatGPT https://gpt4.cc/
+12-09
+机器人自动答问 ChatGPT https://gpt4.cc/ 有人把接口封装并公开了，可以试一试给机器人提问，真心牛B
+基于OpenAI实现的个人助理
+YV_LING的博客
+  50
+最近OpenAI所开发的ChatGPT非常火，于是我也去体验了一下。在玩过之余，就想着能不能把它移植到系统环境，成为一个日常的个人助理，帮助我解决学习、开发或者摸鱼时的种种需求。于是，看过官方文档之后，发现官方提供了GPT模型的API，那还等什么，开始coding…
+ChatGPT的注册和使用教程
+civiljiao的博客
+  368
+ChatGPT的注册和使用教程
+ 
+ChatGPT怎么用
+John Kang的博客
+  5319
+最开始了解ChartGPT居然是抖音上看到的，之前了解过GPT-3，最开始认为可能类似的语言模型，上手以后才发现，这玩意挺有意思，某些方面，比百度强，但是比人还差十万八千里，智力不好说，最起码现在能计算1+1=2，能解一元一次方程，可能更复杂的问题，比如leecode的题，都是可以求解的（没试过，不清楚和搜索引擎上的答案差别多少）。美国有一部电视剧，讲的就是一个强大的AI模型，可以预测未来发生的任何事情，阻止悲剧的发生，openai做的事情，感觉不仅仅是能成为一个强大的搜索引擎，他们的目标估计更远大。
+GPTchartbot 聊天机器人的模型文件
+08-11
+聊天机器人的模型文件 https://gitee.com/chenyang918/GPT2-chitchathttps://gitee.com/chenyang918/GPT2-chitchat
+prompts:免费和开源的OpenAI GPT-3提示管理
+03-08
+提示 这是OpenAI GPT-3提示的免费开放源代码（FOSS）策划。 执照 GPL-3 .prompt文件格式 这是我用来组织这些提示的格式。 它是具有模式的yaml ，尚未定义。 该文件与该模式的示例一样好。 title : " meeting bullet points to summary " prompt : |+ Convert my short hand into a first-hand account of the meeting: <1> Summary: engine : " davinci-instruct-beta " temperature : 0.7 max-tokens : 60 top-p : 1 frequency-penalty : 0.0 presence-penalty : 0.0 best-of : 1 stop-
+让chartGPT成为你的QQ好友（适合树莓派、虚拟机、服务器）
+pzzhouziao的博客
+  657
+使用树莓派部署chartGPT为qq机器人，使用虚拟机或者服务器的朋友可以从标题二开始看
+Chat GPT原理
+Garson的博客
+  2033
+那他到底是怎么训练成现在这样的呢？
+gpt 语言模型_了解gpt 3 openais最新语言模型
+weixin_26630173的博客
+  998
+gpt 语言模型 1.简介 (1. Introduction) If you have been following the recent developments in the NLP space, then it would be almost impossible to avoid the GPT-3 hype in the last few months. It all started w...
+QtCharts 折线、饼图代码
+pzy的专栏
+  532
+#include "demo_01.h" #include <QtCharts> using namespace QtCharts; #include <QVBoxLayout> #include <QTimer> double gX = 0; double gY = 0; QVector<QPointF> gPts; demo_01::demo_01(QWidget *parent) : QWidget(parent) { //创建图.
+以GPT方式安装centos
+钻石
+  5406
+选择GPT方式安装系统的原因： 1、MBR分区表最多只能识别2TB左右的空间，大于2TB的容量将无法识别从而导致硬盘空间浪费；GPT分区表则能够识别2TB以上的硬盘空间。 2、MBR分区表最多只能支持4个主分区或三个主分区+1个扩展分区(逻辑分区不限制)；GPT分区表在Windows系统下可以支持128个主分区。 3、在MBR中，分区表的大小是固定的；在G...
+用Python调用OpenAI API做有趣的事
+咖啡花园
+  2282
+OpenAI 文本编写 故事创作 餐厅评论 广告文案 面试问题 头脑风暴 论文大纲 学习笔记 创建食谱 推荐书单 产品名称 总结内容 电子表格 电子邮件 OpenAI 代码续写 Go代码 HTML代码 JavaScript函数 Python代码 Python函数 Python测试代码 Python修复BUG Python注释文档 Python代码重构 Python翻译成Java R代码 MySQL查询 PostgreSQL查询 TypeScript函数
+ChartGPT火出了圈，AI伴生时代已来
+最新发布
+MavenTalk
+  257
+ChartGPT 最近火热，对话交流自然不在话下，命题作文、写代码、作诗、调试代码Bug也能胜任，比当年的微软小冰强出不少。不过当小冰的陪聊确实俘获了不少用户，后续更是打通了很多平台，比如QQ、微信、公众号等，还干起了虚拟男/女友的买卖，说明小冰在人类情感交互中还是很强大的。题图 from unsplashChartGPT由是OpenAI公司推出，在AI领域可以谓金字塔塔尖一般的存在，背后更是站在...
+ChatGPT的使用基础
+热门推荐
+  1万+
+最近ChatGPT突然火出圈了，想去注册一个，BUT。这个难不到我们互联网人。我们可以进行更加科学的上网，当然需要全局的。如果还是不行，就使用chrome的隐私模式。注册完成之后，就提示需要输入手机号，现在有很多办法比如： 在线接受短信的虚拟号码 - SMS-Activate充个几块钱，购买印度的服务就可以了。实在是太热了，官方指南可以直接看。然后就能简单了，下面验证手机号码的时候，选择India，就收短信就好了。他在很认真的回答我的问题
+强大的Winform Chart图表控件使用说明
+爱喝奶茶的博客
+  2684
+引言 以前经常开发网页端的软件，图表组件一般用echart，功能和样式都非常齐全。但是当用winform开发时，类似的组件就很少了，而且稍微好点的都还收费。 后来探索了下winform自带的 chart控件，发现其功能非常强大，只要你有好看的设计图，基本上都可以按设计图调整出来，下面展示下自己做技术测试的图片： 使用说明 在工具箱-数据分组中我们就可以看到chart控件，使用时拖拽到界面即可。可...
+使用OpenAI作为开发辅助工具效果分析
+gallonyin的博客
+  418
+最近OpenAI已经火出圈了，我们也对新的技术产品保持好奇，肯定要做个测评，和大多数人关注的领域不通（大部分人在关注它生成文案的能力，以及对部分运营人员的冲击概率），我们尝试在软件开发层面关注下它目前的实力如何。直接进入问答环节 看来这点难不倒它，我换个语言试试呢 这也没问题，上点难度，增加我的需求描述 总结 现在的OpenAI已经非常准确的理解了我的需求描述（它可是没有使用中文语料的，对中文的理解和输出都是再翻译的结果），从实现层面上已经可以真正帮助开发者做一些事情了，比如编写一些工具类或常规功能的
+Java写openai_是否有可能在OpenAI中创建一个新的健身房环境？
+weixin_30064949的博客
+  197
+在极小的环境中查看我的banana-gym .创建新环境请参阅存储库的主页面：步骤是：使用PIP包结构创建新存储库它看起来应该是这样的gym-foo/README.mdsetup.pygym_foo/__init__.pyenvs/__init__.pyfoo_env.pyfoo_extrahard_env.py有关其内容，请点击上面的链接 . 那里没有提到的细节特别是 foo_env.py 中的...
+安装CentOS7时设置GPT分区表
+m0_46363819的博客
+  1396
+安装CentOS 7时设置GPT分区表的配置欢迎使用Markdown编辑器新的改变功能快捷键合理的创建标题，有助于目录的生成如何改变文本的样式插入链接与图片如何插入一段漂亮的代码片生成一个适合你的列表创建一个表格设定内容居中、居左、居右SmartyPants创建一个自定义列表如何创建一个注脚注释也是必不可少的KaTeX数学公式新的甘特图功能，丰富你的文章UML 图表FLowchart流程图导出与导入导出导入 安装CentOS 7时，如果硬盘容量小于2TB，系统默认会使用MBR模式来安装，若需强制使用GPT分
+“相关推荐”对你有帮助么？
+
+非常没帮助
+
+没帮助
+
+一般
+
+有帮助
+
+非常有帮助
+©️2022 CSDN 皮肤主题：大白 设计师：CSDN官方博客 返回首页
+关于我们
+招贤纳士
+商务合作
+寻求报道
+
+400-660-0108
+
+kefu@csdn.net
+
+在线客服
+工作时间 8:30-22:00
+公安备案号11010502030143
+京ICP备19004658号
+京网文〔2020〕1039-165号
+经营性网站备案信息
+北京互联网违法和不良信息举报中心
+家长监护
+网络110报警服务
+中国互联网举报中心
+Chrome商店下载
+账号管理规范
+版权与免责声明
+版权申诉
+出版物许可证
+营业执照
+©1999-2023北京创新乐知网络技术有限公司
+
+roykingw
+码龄15年
+ 暂无认证
+104
+原创
+5935
+周排名
+1万+
+总排名
+11万+
+访问
+ 
+等级
+1730
+积分
+3650
+粉丝
+60
+获赞
+69
+评论
+323
+收藏
+授人以渔
+分享达人
+签到新秀
+持之以恒
+笔耕不辍
+勤写标兵
+知无不言
+私信
+关注
+
+搜博主文章
+
+
+热门文章
+常用MAVEN打包方式总结  19797
+SpringCloud之Eureka   15347
+elasticSearch spark支持   7677
+swagger-2.6.0 记录一个下午的无聊举动   6577
+体验一下传说中可以干掉程序员的OpenAI ChatGPT   6203
+分类专栏
+
+DDD领域驱动设计
+付费
+13篇
+
+SpringCloudAlibaba
+12篇
+
+类加载
+1篇
+
+Angularjs
+
+Play
+
+Spring
+
+SpringBoot
+11篇
+
+dubbo与eurake
+6篇
+
+java
+45篇
+
+js
+
+scala
+
+大数据相关
+34篇
+
+爬虫相关
+
+maven
+
+最新评论
+体验一下传说中可以干掉程序员的OpenAI ChatGPT
+Secondogli: 为啥你的可以中文沟通呢 我这只能英文？
+RocketMQ广播消费本地Offset文件丢失问题探秘
+roykingw: 首先，这个问题其实并不是太严重。广播消费如果找不到本地的offset，那就会从新的消息开始消费。在大部分场景下，这也就足够了。 然后，后面去RocketMQ官方社区问了一下。有大神回复新版本的插件已经修复了这个问题。至于如何修复，暂时没有继续跟踪。
+体验一下传说中可以干掉程序员的OpenAI ChatGPT
+roykingw: 用过一些科学上网的工具就知道了。
+体验一下传说中可以干掉程序员的OpenAI ChatGPT
+shandianchengzi: 没有写完的话跟它说“继续”，它就继续写了。
+体验一下传说中可以干掉程序员的OpenAI ChatGPT
+清风与我与明月: 都说代理要切换，都只简单说一句就没了。对于不熟悉的人来说，确实不会啊。表情包
+您愿意向朋友推荐“博客详情页”吗？
+
+强烈不推荐
+
+不推荐
+
+一般般
+
+推荐
+
+强烈推荐
+最新文章
+Kafka3.x核心速查手册三、服务端原理篇-3、Broker故障恢复机制
+Kafka3.x核心速查手册三、服务端原理篇-2、Broker选举机制
+Kafka3.x核心速查手册三、服务端原理篇-1、Zookeeper整体数据
+2022年20篇2021年53篇2020年14篇2019年9篇2018年1篇2017年11篇
+
+目录
+ChatGPT初体验
+注册
+注册准备工作
+注册工作：
+1、进入ChartGPT的主页，选择体验ChatGPT
+2、在注册账号时，建议就选择用Gmail方式登录。比较简单。
+3、接收验证邮件
+4、验证手机号。
+5、使用接码服务平台购买短信接收服务。
+6、注册成功
+偷懒的脑洞
+
+
+举报
